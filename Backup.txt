@@ -1,0 +1,12 @@
+Uploading /Jobs/Backup/code/Autoapp-20240212.zip
+File successfully uploaded
+Id: 1Wssj4jPluu3jvzj3LBjYwi8q_i0EBBZr
+Name: Autoapp-20240212.zip
+Mime: application/zip
+Size: 248.1 MB
+Created: 2024-02-12 23:43:07
+Modified: 2024-02-12 23:43:07
+MD5: 1e2684d562bc1f1a5149e57c52b8ee00
+Shared: False
+Parents: 0AK6JDz5lavlGUk9PVA
+ViewUrl: https://drive.google.com/file/d/1Wssj4jPluu3jvzj3LBjYwi8q_i0EBBZr/view?usp=drivesdk

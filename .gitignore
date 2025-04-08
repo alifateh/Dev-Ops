@@ -1,0 +1,4 @@
+/Backup/
+*.log
+config.con
+DB-Config.php
