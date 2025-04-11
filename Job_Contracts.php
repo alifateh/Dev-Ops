@@ -13,6 +13,8 @@ $options = [
 $dsn = "mysql:host=$servername;dbname=$dbname;charset=$charset";
 try {
     $pdo = new PDO($dsn, $username, $password, $options);
+    echo "Connection is set " . $d . "  " . "\n";
+    echo "*----------------------------------*" . "\n";
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
@@ -28,7 +30,7 @@ function Get_MechanicsAll($pdo)
 
 function Get_ContractsAll($pdo)
 {
-    $qur = 'SELECT * FROM `Contarct_All` WHERE `Status` = 1';
+    $qur = 'SELECT * FROM `Contarct_All`';
     $stmt = $pdo->prepare($qur);
     $stmt->execute();
     $data = $stmt->fetchAll();
@@ -73,14 +75,20 @@ if (!empty($Contracts)) {
                 $condition = Get_Contract_ByMechanicContractTariff($cont['ContractGUID'], $Mech['GUID'], $cont['TariffVersionID'], $pdo);
                 if (empty($condition)) {
                     C_Contract_ByMechanicContract($cont['ContractGUID'], $Mech['GUID'], $cont['TariffVersionID'], $pdo);
+                    echo "new contarct created for user  $Mech['GUID'] and contractID $cont['ContractGUID']" . $d . "  " . "\n";
+                    echo "*----------------------------------*" . "\n";
                 }
             }
+            echo "foreach contarct each mechanic checked " . $d . "  " . "\n";
+            echo "*----------------------------------*" . "\n";
         }
     } else {
         echo "there is no Contract";
+        echo "*----------------------------------*" . "\n";
     }
 } else {
     echo "there is no mechanic";
+    echo "*----------------------------------*" . "\n";
 }
 
 
