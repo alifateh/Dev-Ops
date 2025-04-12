@@ -50,7 +50,7 @@ try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $sql = 'SELECT * FROM `Invoice` ORDER BY `Invoice`.`ID` DESC LIMIT 1';
+  $sql = 'SELECT * FROM `Invoice` where `Invoice`.`Visible`=1 ORDER BY `Invoice`.`ID` DESC LIMIT 1';
   $last_Invoice = $conn->query($sql);//select last INVOICE
   if ($last_Invoice->rowCount() > 0) {
     while ($row = $last_Invoice->fetch(PDO::FETCH_ASSOC)) {
