@@ -88,7 +88,5 @@ if (!empty($Contracts)) {
     echo "there is no mechanic";
     echo "*----------------------------------*" . "\n";
 }
-
-
 echo "[OK] on " . $d . "  " . "\n";
 echo "*----------------------------------*" . "\n";
