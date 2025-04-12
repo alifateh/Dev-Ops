@@ -13,8 +13,6 @@ $options = [
 $dsn = "mysql:host=$servername;dbname=$dbname;charset=$charset";
 try {
     $pdo = new PDO($dsn, $username, $password, $options);
-    echo "Connection is set " . $d . "  " . "\n";
-    echo "*----------------------------------*" . "\n";
 } catch (\PDOException $e) {
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
