@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 TargetDIR=/code/Autoapp
 FILE=/Jobs/Backup/code/Autoapp-`date +"%Y%m%d"`.zip
 keep_day=60

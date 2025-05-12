@@ -1,5 +1,4 @@
-#!/bin/sh
-
+#!/usr/bin/env bash
 Backupdir=/Jobs/Backup/sql
 FILE=$Backupdir/Mechanic_Portal.sql.`date +"%Y%m%d"`
 DATABASE=Mechanic_Portal
